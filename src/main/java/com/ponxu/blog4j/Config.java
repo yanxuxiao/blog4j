@@ -109,9 +109,9 @@ public class Config {
 			dbUser = dbUser2 = prop.getProperty("db_user");
 			dbPassword = dbPassword2 = prop.getProperty("db_password");
 			dbName = dbName2 = prop.getProperty("db_name");
-			dbHost = dbHost2 = prop.getProperty("db_host", "127.0.1");
+			dbHost = dbHost2 = prop.getProperty("db_host", "127.0.0.1");
 			dbPort = dbPort2 = BeanUtils.cast(
-					prop.getProperty("db_port", "3307"), int.class);
+					prop.getProperty("db_port", "3306"), int.class);
 
 			in.close();
 		} catch (IOException e) {

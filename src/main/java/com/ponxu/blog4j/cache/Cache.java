@@ -14,7 +14,8 @@ public class Cache {
 
 	static {
 		try {
-			memcache = new SaeMemcache();
+			memcache = null ;
+			//memcache = new SaeMemcache();
 		} catch (Exception e) {
 			memcache = null;
 		}
