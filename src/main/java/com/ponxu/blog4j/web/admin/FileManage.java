@@ -75,7 +75,7 @@ public class FileManage extends AdminOAuthHandler {
 		String fileName = filePart.getFileName();
 		File f = new File(fileName);
 		fileName = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date())
-				+ f.getName();
+				+ f.getName().substring(f.getName().lastIndexOf("."));
 
 		if (Config.isCloudFoundry) {
 			// CloudFoundry 使用mongodb
